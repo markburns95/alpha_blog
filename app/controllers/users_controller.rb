@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :require_user, except: [:index, :show, :new, :create]
   before_action :require_same_user, only: [:edit, :update, :destroy]
-  before_action :requre_admin, only: [:destroy]
+  before_action :require_admin, only: [:destroy]
 
   def index
     @users = User.paginate(page: params[:page], per_page: 5)
