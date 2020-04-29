@@ -14,6 +14,11 @@
           <h5 class="card-title"><%= user.username %></h5>
           <p class="card-text"><%= pluralize(user.articles.count, "article") if user.articles %></p>
           <%= link_to 'View Profile', user_path(user), class: "btn btn-primary" %>
+          <% if logged_in? and current_user.admin? %>
+            <%= link_to 'Delete User', user_path(user), method: :delete,
+                                                        class: "btn btn-danger",
+                                                        data: { confirm: "Are you sure you want to delete the user and all of their articles?" } %>
+          <% end %>
         </div>
       </div>
     </div>
