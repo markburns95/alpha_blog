@@ -9,7 +9,7 @@ gem 'rails', '~> 6.0.2', '>= 6.0.2.2'
 gem 'bcrypt', '~> 3.1.7'
 # Add pagination
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
-gem 'bootstrap-will_paginate', '~> 1.0' 
+gem 'bootstrap-will_paginate', '~> 1.0'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -53,6 +53,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'rails-controller-testing'
 end
 
 group :production do
