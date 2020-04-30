@@ -5,6 +5,9 @@
   <div class="row justify-content-center">
     <div class="col-4 mt-4">
 
+      <div class="row mt-4 justify-content-center">
+        <%= will_paginate(@category, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+      </div>
       <% @categories.each do |category| %>
         <ul class="list-group text-center">
           <li class="list-group-item article-title">
@@ -12,6 +15,9 @@
           </li>
         </ul>
       <% end %>
+      <div class="row mt-4 justify-content-center">
+        <%= will_paginate(@category, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+      </div>
 
     </div>
   </div>
