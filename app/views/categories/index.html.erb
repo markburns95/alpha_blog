@@ -9,11 +9,12 @@
         <%= will_paginate(@category, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
       </div>
       <% @categories.each do |category| %>
-        <ul class="list-group text-center">
+        <div class="list-group text-center">
           <li class="list-group-item article-title">
             <%= link_to "#{category.name}", category_path(category) %>
+            <span class="badge"><%= category.articles.count %></span>
           </li>
-        </ul>
+        </div>
       <% end %>
       <div class="row mt-4 justify-content-center">
         <%= will_paginate(@category, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>

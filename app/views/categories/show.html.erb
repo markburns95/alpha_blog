@@ -1,0 +1,14 @@
+<h1 class="text-center mt-4">Category: <%= @category.name %></h1>
+
+<div class="container">
+  <div class="row mt-4 justify-content-center">
+    <%= will_paginate(@category_articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+  </div>
+  <%= render 'articles/article', obj: @category_articles %>
+  <div class="row mt-4 justify-content-center">
+    <%= will_paginate(@category_articles, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer) %>
+  </div>
+  <div class="row mb-4 justify-content-center">
+    <%= link_to '[ Create a new article ]', new_article_path, class: "text-info justify-content-center" %>
+  </div>
+</div>
